@@ -1,0 +1,9 @@
+
+    Supervised learning is a machine learning approach where algorithms learn from labeled training data. In supervised learning, you provide the model with input-output pairs, and it learns to map inputs to correct outputs. Common supervised learning algorithms include linear regression, decision trees, random forests, and support vector machines. Examples include email spam detection, image classification, and price prediction.
+
+    Unsupervised learning finds patterns in data without labeled examples. It includes clustering algorithms like K-means that group similar data points, and dimensionality reduction techniques like Principal Component Analysis (PCA) that simplify data while preserving important information. Common applications include customer segmentation and data compression.
+
+    Reinforcement learning learns through trial and error, receiving rewards or penalties for actions. The agent explores an environment and learns optimal strategies to maximize cumulative reward. This approach is used in game playing (like AlphaGo), robotics, and autonomous vehicle navigation.
+
+    Deep learning uses artificial neural networks with multiple layers to model complex patterns in data. These networks can automatically learn hierarchical representations, making them effective for image recognition, natural language processing, and speech recognition. Popular architectures include convolutional neural networks for images and recurrent neural networks for sequences.
+    

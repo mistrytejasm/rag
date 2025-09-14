@@ -1,0 +1,14 @@
+{
+    "title": "Sample JSON",
+    "description": "This is a sample JSON file with dummy content.",
+    "items": [
+        {
+            "id": 1,
+            "name": "Alice"
+        },
+        {
+            "id": 2,
+            "name": "Bob"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+
+    Artificial Intelligence is the simulation of human intelligence in machines that are programmed to think and learn like humans. AI systems can perform tasks that typically require human intelligence, such as visual perception, speech recognition, decision-making, and language translation.
+
+    Natural Language Processing is a branch of AI that helps computers understand, interpret, and manipulate human language. NLP combines computational linguistics with statistical machine learning to enable computers to process and analyze large amounts of natural language data.
+
+    Computer vision is another important AI field that enables machines to interpret and understand visual information from the world. This technology is used in applications ranging from medical image analysis to autonomous vehicles and facial recognition systems.
+    

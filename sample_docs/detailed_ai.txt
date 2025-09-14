@@ -1,0 +1,7 @@
+
+    Natural Language Processing combines computational linguistics with machine learning to help computers understand human language. Key NLP tasks include sentiment analysis, named entity recognition, machine translation, and text summarization. Modern NLP systems use transformer architectures like BERT and GPT for improved understanding.
+
+    Computer vision enables machines to interpret visual information from images and videos. Core techniques include object detection, image segmentation, and facial recognition. Convolutional neural networks are the foundation of most computer vision systems, with applications in medical imaging, autonomous vehicles, and security systems.
+
+    Artificial Intelligence encompasses the broader goal of creating intelligent machines. AI includes symbolic reasoning, expert systems, and modern machine learning approaches. Current AI systems excel at specific tasks but artificial general intelligence remains a long-term research goal.
+    

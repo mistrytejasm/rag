@@ -10,16 +10,15 @@ logger = get_logger(__name__)
 
 class CompleteRAGSystem:
     """
-    Production-ready RAG System with proven reranking performance
-    Optimized based on Phase 4 A/B testing results (+2,352% improvement)
+    RAG System with proven reranking performance
     """
     
     def __init__(self, 
                  collection_name: str = "production_rag",
                  persist_directory: str = "./vector_db",
-                 chunk_size: int = 500,
-                 overlap: int = 100,
-                 enable_reranking: bool = True):  # Default to True based on A/B results
+                 chunk_size: int = 1000,
+                 overlap: int = 200,
+                 enable_reranking: bool = True):  
         
         # Initialize document processing pipeline
         self.embedding_pipeline = EmbeddingPipeline(
@@ -36,7 +35,7 @@ class CompleteRAGSystem:
         
         self.embedding_manager = EmbeddingManager()
         
-        # Use enhanced retrieval with reranking (proven +2,352% improvement)
+        # Use enhanced retrieval with reranking 
         self.retrieval_engine = EnhancedRetrievalEngine(
             vector_store=self.vector_store,
             embedding_manager=self.embedding_manager,
@@ -84,7 +83,7 @@ class CompleteRAGSystem:
              top_k: int = 5,
              source_filter: Optional[str] = None,
              page_filter: Optional[int] = None) -> Dict:
-        """Query the production RAG system"""
+        """Query the RAG system"""
         logger.info(f"Processing query: '{question}'")
         
         # Build filters

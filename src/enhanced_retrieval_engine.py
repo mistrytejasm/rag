@@ -26,21 +26,21 @@ class EnhancedRetrievalEngine:
         if self.enable_reranking:
             try:
                 self.reranker = RerankerService()
-                logger.info("✅ Enhanced retrieval with reranking enabled")
+                logger.info("Enhanced retrieval with reranking enabled")
             except Exception as e:
                 logger.warning(f"Reranker failed to load, disabling: {e}")
                 self.enable_reranking = False
                 self.reranker = None
         else:
             self.reranker = None
-            logger.info("📊 Enhanced retrieval without reranking (A/B test group)")
+            logger.info("Enhanced retrieval without reranking (A/B test group)")
 
     def retrieve_context(self, 
                         query: str,
                         top_k: int = 5,
                         fetch_k: Optional[int] = None,
                         filters: Optional[Dict] = None,
-                        min_similarity: float = 0.1) -> Dict:
+                        min_similarity: float = 0.0) -> Dict:
         """
         Retrieve context with optional reranking
         
@@ -61,7 +61,7 @@ class EnhancedRetrievalEngine:
         else:
             fetch_k = fetch_k or top_k
         
-        logger.info(f"🔍 Retrieving context: query='{query[:50]}...', fetch_k={fetch_k}, final_k={top_k}")
+        logger.info(f"Retrieving context: query='{query[:50]}...', fetch_k={fetch_k}, final_k={top_k}")
         
         try:
             # Step 1: Generate query embedding

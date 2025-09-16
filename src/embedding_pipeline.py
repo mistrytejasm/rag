@@ -14,8 +14,8 @@ class EmbeddingPipeline:
     
     def __init__(self, 
                  chunking_strategy: str = "semantic",
-                 chunk_size: int = 500,  # Good balance for all-mpnet-base-v2
-                 overlap: int = 100,
+                 chunk_size: int = 1000,  # Good balance for all-mpnet-base-v2
+                 overlap: int = 200,
                  batch_size: int = 32):
         
         # Initialize document processing pipeline
@@ -83,7 +83,7 @@ class EmbeddingPipeline:
         return embedding_results
 
     def process_single_document(self, file_path: str) -> Dict:
-        """Process single document - perfect for testing"""
+        """Process single document"""
         results = self.process_documents_to_embeddings([file_path])
         return results[file_path]
 

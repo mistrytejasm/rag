@@ -21,7 +21,7 @@ class RerankerService:
         try:
             logger.info(f"Loading reranker model: {self.model_name}")
             self.model = CrossEncoder(self.model_name)
-            logger.info(f"✅ Reranker model loaded successfully")
+            logger.info(f"Reranker model loaded successfully")
         except Exception as e:
             logger.error(f"Failed to load reranker model: {e}")
             raise

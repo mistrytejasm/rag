@@ -11,14 +11,14 @@ logger = get_logger(__name__)
 
 class GroqLLMClient:
     """
-    Production-ready Groq LLM client for RAG generation
+    Groq LLM client for RAG generation
     Optimized for research/QA applications with proper error handling
     """
     
     def __init__(self, 
                  model_name: str = "openai/gpt-oss-120b", 
                  api_key: Optional[str] = None,
-                 max_tokens: int = 1024,
+                 max_tokens: int = 3000,
                  temperature: float = 0.1):
         
         self.model_name = model_name
@@ -110,11 +110,11 @@ class GroqLLMClient:
                 'finish_reason': response.choices[0].finish_reason
             }
             
-            logger.info(f"✅ Generated response: {usage.completion_tokens} tokens in {generation_time:.2f}s")
+            logger.info(f"Generated response: {usage.completion_tokens} tokens in {generation_time:.2f}s")
             return result
             
         except Exception as e:
-            logger.error(f"❌ Groq generation failed: {e}")
+            logger.error(f"Groq generation failed: {e}")
             return {
                 'response': f"I apologize, but I encountered an error generating a response: {str(e)}",
                 'error': str(e),

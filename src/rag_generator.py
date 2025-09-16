@@ -21,15 +21,15 @@ class RAGGenerator:
         # Initialize RAG system (your proven Phase 4 system)
         self.rag_system = rag_system or CompleteRAGSystem(
             enable_reranking=enable_reranking,
-            chunk_size=500,
-            overlap=100
+            chunk_size=1000,
+            overlap=200
         )
         
         # Initialize Groq LLM
         self.groq_client = GroqLLMClient(
             model_name=groq_model,
             api_key=groq_api_key,
-            max_tokens=1024,
+            max_tokens=3000,
             temperature=0.1
         )
         
@@ -55,7 +55,7 @@ class RAGGenerator:
             Complete response with answer, sources, and metadata
         """
         
-        logger.info(f"🔍 Processing question: '{question}'")
+        logger.info(f"Processing question: '{question}'")
         
         try:
             # Step 1: Retrieve relevant context (your proven system)
@@ -106,12 +106,12 @@ class RAGGenerator:
                 }
             }
             
-            logger.info(f"✅ Generated answer: {complete_response['metadata']['completion_tokens']} tokens, {complete_response['metadata']['chunks_retrieved']} sources")
+            logger.info(f"Generated answer: {complete_response['metadata']['completion_tokens']} tokens, {complete_response['metadata']['chunks_retrieved']} sources")
             
             return complete_response
             
         except Exception as e:
-            logger.error(f"❌ RAG generation failed: {e}")
+            logger.error(f"RAG generation failed: {e}")
             return {
                 'answer': f"I encountered an error while processing your question: {str(e)}",
                 'sources': [],

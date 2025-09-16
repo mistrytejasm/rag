@@ -6,7 +6,7 @@ from src.logger import get_logger
 logger = get_logger(__name__)
 
 class Chunker:
-    def __init__(self, strategy="semantic", chunk_size=200, overlap=50, model_name="gpt-3.5-turbo"):
+    def __init__(self, strategy="semantic", chunk_size=1000, overlap=200, model_name="gpt-3.5-turbo"):
         self.strategy = strategy
         self.chunk_size = chunk_size  # in tokens, not words
         self.overlap = overlap        # in tokens

@@ -7,7 +7,7 @@ from src.logger import get_logger
 
 logger = get_logger(__name__)
 
-class EnhancedRetrievalEngine:
+class RetrievalEngine:
     """
     Advanced retrieval engine with optional reranking for A/B testing
     Supports both standard retrieval and reranked retrieval

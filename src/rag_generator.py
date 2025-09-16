@@ -1,5 +1,5 @@
 from typing import Dict, List, Optional
-from src.complete_rag_system import CompleteRAGSystem
+from src.rag_system import RAGSystem
 from src.groq_llm import GroqLLMClient
 from src.logger import get_logger
 
@@ -12,14 +12,14 @@ class RAGGenerator:
     """
     
     def __init__(self, 
-                 rag_system: Optional[CompleteRAGSystem] = None,
+                 rag_system: Optional[RAGSystem] = None,
                  groq_model: str = "openai/gpt-oss-120b",
                  groq_api_key: Optional[str] = None,
                  retrieval_top_k: int = 5,
                  enable_reranking: bool = True):
         
         # Initialize RAG system (your proven Phase 4 system)
-        self.rag_system = rag_system or CompleteRAGSystem(
+        self.rag_system = rag_system or RAGSystem(
             enable_reranking=enable_reranking,
             chunk_size=1000,
             overlap=200
